@@ -80,8 +80,10 @@
             //배너 실행 함수
             function flowBannerAct() {
                 //배너 롤링 초기화
-                $wrap.find('.list').css({ 'animation': 'none' });
-                $wrap.find('.list').slice(2).remove();
+                if(wrapWidth != ''){
+                    $wrap.find('.list').css({ 'animation': 'none' });
+                    $wrap.find('.list').slice(2).remove();
+                }
                 wrapWidth = $wrap.width();
                 listWidth = $list.width();
 
