@@ -47,9 +47,9 @@
 	</div>
 
     <script>
-		window.onload = function() {
-			setFlowBanner();
-        };
+        $(window).on('load', function () {
+            setFlowBanner();  
+        })
 
 		function setFlowBanner(){
             const $wrap = $('.flow_banner');
