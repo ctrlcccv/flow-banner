@@ -64,15 +64,11 @@
             flowBannerAct()
             
             //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
-            let winW = window.innerWidth;
-            let newWChk = '';
-            let oldWchk = winW > 1279 ? 'pc' : (winW > 767 ? 'ta' : 'mo');
-
+            let oldWChk = window.innerWidth > 1279 ? 'pc' : (window.innerWidth > 767 ? 'ta' : 'mo');
             $(window).on('resize', function() {
-                winW = window.innerWidth;
-                newWChk = winW > 1279 ? 'pc' : (winW > 767 ? 'ta' : 'mo');
-                if (oldWchk != newWChk) {
-                    oldWchk = newWChk;
+                let newWChk = window.innerWidth > 1279 ? 'pc' : (window.innerWidth > 767 ? 'ta' : 'mo');
+                if (newWChk != oldWChk) {
+                    oldWChk = newWChk;
                     flowBannerAct();
                 }
             });
