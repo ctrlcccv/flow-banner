@@ -71,7 +71,7 @@
             $(window).on('resize', function() {
                 winW = window.innerWidth;
                 newWChk = winW > 1279 ? 'pc' : (winW > 767 ? 'ta' : 'mo');
-                if (oldWchk !== newWChk) {
+                if (oldWchk != newWChk) {
                     oldWchk = newWChk;
                     flowBannerAct();
                 }
